@@ -3,6 +3,6 @@
   <title>PHP</title>
  </head>
  <body>
- <?php echo '<p>Hello World - version test-220566 of 1million</p>'; ?> 
+ <?php echo '<p>Hello World - version test-220566 of 2million</p>'; ?> 
  </body>
 </html>
