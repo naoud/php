@@ -5,7 +5,7 @@ metadata:
   labels:
     app: php70
   annotations:
-    pipeline.alpha.openshift.io/uses: '[{"name": "php70", "namespace": "", "kind": "DeploymentConfig"}]'
+    pipeline.alpha.openshift.io/uses: '[{"name": "php", "namespace": "", "kind": "DeploymentConfig"}]'
 spec:
   triggers:
   - type: GitHub
@@ -18,9 +18,9 @@ spec:
       jenkinsfile: |-
          node {
            stage('buildImage'){
-             openshiftBuild(buildConfig: 'php70', showBuildLogs: 'true')
+             openshiftBuild(buildConfig: 'php', showBuildLogs: 'true')
            }
            stage('deployApplication'){
-             openshiftDeploy(deploymentConfig: 'php70')
+             openshiftDeploy(deploymentConfig: 'php')
            }
          }
